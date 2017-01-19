@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html ng-app= "superheroes">
+<html ng-app="superheroes">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Superhero Phone Book</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  <script src="app.js"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Superhero Phone Book</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="superheroes.module.js"></script>
+    <script src="seed.js"></script>
+    <script src="superheroes.controller.js"></script>
+    <script src="app.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <h1><center><u>SUPERHERO PHONEBOOK</u></center></h1>
+<body ng-controller="SuperheroesCtrl as vm">
+    <h1><center><u>SUPERHERO PHONEBOOK</u></center></h1>
+<div ng-repeat="hero in heroes">
+  <p>
+    {{hero.name}}
+  </p>
+  <p>
+    {{hero.phone}}
+  </p>
 
+</div>
 
 </body>
+
 </html>

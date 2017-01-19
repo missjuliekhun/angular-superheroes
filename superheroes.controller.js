@@ -1,20 +1,17 @@
 (function(){
   angular
   .module('superheroes')
-  .controller('Superheroes', Superheroes);
+  .controller('SuperheroesCtrl', SuperheroesCtrl);
 
-  SuperheroesCtrl.$inject = ('$http', '$scope');
+  SuperheroesCtrl.$inject = ['$http', '$scope'];
+  console.log("cool")
 
-  //INDEX
-  function SuperheroesCtrl($http, $scope) {
+
+  function SuperheroesCtrl($http, $scope){
     var rootURL = 'http://localhost:3000';
 
-    $scope.getSuperheroes = function(){
-      $http.get(function(res){
-
-      })
-    }
+// INDEX
+$scope.heroes = heroes;
 
   }
-
 })();

@@ -1,3 +1,3 @@
 (function(){
-  angular.module('grumblr', []);
+  angular.module('superheroes', []);
 })();
